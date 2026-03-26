@@ -63,7 +63,7 @@ ol {
   display: flex;
   justify-content: space-between;
   align-items: start;
-  gap: 25px;
+  gap: 40px;
 }
 
 .search-form__fieldset {
@@ -71,8 +71,9 @@ ol {
 }
 
 .search-form__fieldset-title {
+  margin-bottom: 5px;
+  font-weight: 400;
   font-size: 18px;
-  line-height: 2;
 }
 
 .search-form__submit-button {
@@ -92,16 +93,7 @@ ol {
   text-underline-offset: 2px;
 }
 
-.search-form__label:has(.search-form__checkbox:focus-visible) {
-  outline: 1px solid #fff;
-  outline-offset: 2px;
-}
-
-.search-form__label:has(.search-form__textfield:focus-visible) {
-  border-top: 1px solid #fff;
-  border-right: none;
-  border-bottom: 1px solid #fff;
-  border-left: none;
+.search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
   outline-offset: 2px;
 }
@@ -118,7 +110,7 @@ ol {
   position: relative;
   width: 711px;
   height: 386px;
-  margin-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .result__video {
@@ -139,6 +131,7 @@ ol {
   flex-direction: column;
   gap: 30px;
   height: 298px;
+  padding-top: 2px;
   overflow-y: auto;
 }
 
@@ -174,8 +167,6 @@ ol {
 
 .content__video-card-description-container {
   flex-grow: 1;
-  min-height: 103px;
-  max-height: 103px;
   overflow: hidden;
 }
 
@@ -206,7 +197,9 @@ ol {
   border-bottom: 1px solid #fff;
   border-left: none;
   outline: none;
+  color: #fff;
   font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
   font-size: 18px;
   background-color: transparent;
   appearance: none;
@@ -222,7 +215,7 @@ ol {
 
 .search-form__checkbox-list {
   display: flex;
-  gap: 17px;
+  gap: 16.5px;
 }
 
 .search-form__pseudo-checkbox {
@@ -256,11 +249,6 @@ ol {
 
 .content__accent {
   color: #545050;
-  font-family: "Oswald", sans-serif;
-  font-weight: 700;
-  font-size: 75px;
-  line-height: 0.94;
-  text-transform: uppercase;
 }
 
 .content__card-link {
@@ -276,19 +264,22 @@ ol {
   background-color: #545050;
 }
 
+.content__card-link:hover {
+  text-decoration: underline;
+  text-decoration-color: #fff;
+}
+
 .content__card-link:focus {
   border: none;
+}
+
+.content__card-link:focus-visible {
   outline: 1px solid #fff;
 }
 
 .content__list-item {
   padding-right: 3px;
   padding-left: 3px;
-  text-decoration: underline;
-}
-
-.content__list-item:hover {
-  text-decoration: underline;
 }
 
 .visually-hidden {
@@ -303,9 +294,11 @@ ol {
 
 .button {
   border: 1px solid #fff;
-  padding: 9px 75px;
+  padding: 6px 71px;
   color: #fff;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 700;
+  font-size: 18px;
   text-align: center;
   background-color: transparent;
 }
@@ -325,5 +318,8 @@ ol {
 }
 
 .more-button {
-  width: 100%;
+  width: calc(100% - 6px);
+  margin-right: 3px;
+  margin-bottom: 3px;
+  margin-left: 3px;
 }
